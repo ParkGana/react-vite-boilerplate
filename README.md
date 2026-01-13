@@ -15,3 +15,43 @@ yarn create vite . --template react-ts
 ```
 
 </details>
+
+<br />
+
+<!-- Prettier 설정 -->
+<details>
+
+<summary><strong>Prettier 설정</strong></summary>
+<br />
+
+```bash
+yarn add -D prettier
+```
+
+```json
+/* .vscode/settings.json */
+
+{
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "vscode.markdown-language-features",
+    "editor.formatOnSave": false
+  }
+}
+```
+
+```json
+/* .prettierrc */
+
+{	
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "trailingComma": "all"
+}
+```
+
+</details>
