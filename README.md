@@ -261,3 +261,63 @@ yarn add -D prettier-plugin-tailwindcss
 ```
 
 </details>
+
+<br />
+
+<!-- Router 설정 -->
+<details>
+
+<summary><strong>Router 설정</strong></summary>
+<br />
+
+```bash
+yarn add react-router-dom
+```
+
+```tsx
+/* src/pages/Home.tsx */
+
+const HomePage = () => {
+  return <div>Home</div>;
+};
+
+export default HomePage;
+```
+
+```tsx
+/* src/router.tsx */
+
+import { Navigate, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/Home';
+
+function Router() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
+}
+
+export default Router;
+```
+
+```tsx
+/* src/App.tsx */
+
+import { BrowserRouter } from 'react-router-dom';
+import Router from './router';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
+  );
+}
+
+export default App;
+```
+
+</details>
