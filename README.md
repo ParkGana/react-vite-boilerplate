@@ -84,3 +84,34 @@ yarn add -D prettier
 ```
 
 </details>
+
+<br />
+
+<!-- 경로 별칭 설정 -->
+<details>
+
+<summary><strong>경로 별칭 설정</strong></summary>
+<br />
+
+```ts
+/* vite.config.ts */
+
+export default defineConfig({
+  resolve: {
+    alias: [{ find: '@', replacement: '/src' }],
+  },
+});
+```
+
+```json
+/* tsconfig.app.json */
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "@/*": ["./src/*"] }
+  }
+}
+```
+
+</details>
