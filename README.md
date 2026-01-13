@@ -203,3 +203,39 @@ yarn add -D @trivago/prettier-plugin-sort-imports
 ```
 
 </details>
+
+<br />
+
+<!-- Tailwind CSS 설정 -->
+<details>
+
+<summary><strong>Tailwind CSS 설정</strong></summary>
+<br />
+
+```bash
+yarn add tailwindcss@3.3.5 postcss autoprefixer
+
+npx tailwindcss init -p
+```
+
+```css
+/* src/styles/tailwind.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+```ts
+/* tailwind.config.ts */
+
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+</details>

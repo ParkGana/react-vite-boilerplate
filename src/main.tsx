@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import Provider from './provider.tsx';
 import './styles/index.css';
+import './styles/tailwind.css';
 
 createRoot(document.getElementById('root')!).render(
   <Provider>
