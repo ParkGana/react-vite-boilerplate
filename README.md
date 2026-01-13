@@ -115,3 +115,23 @@ export default defineConfig({
 ```
 
 </details>
+
+<br />
+
+<!-- 로컬에서 IP 주소로 접속 가능하도록 설정 -->
+<details>
+
+<summary><strong>로컬에서 IP 주소로 접속 가능하도록 설정</strong></summary>
+<br />
+
+```ts
+/* vite.config.ts */
+
+export default defineConfig({
+  server: {
+    host: '0.0.0.0',
+  },
+});
+```
+
+</details>
