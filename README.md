@@ -321,3 +321,52 @@ export default App;
 ```
 
 </details>
+
+<br />
+
+<!-- 조건부 라우팅 설정 (Router 설정 필요) -->
+<details>
+
+<summary><strong>조건부 라우팅 설정 (Router 설정 필요)</strong></summary>
+<br />
+
+```tsx
+/* src/routes/authenticatedRoute.tsx */
+
+import { Navigate, Outlet } from 'react-router-dom';
+
+const AuthenticatedRoute = () => {
+  const isAuthenticated = true;
+
+  if (!isAuthenticated) return <Navigate to="/signin" replace />;
+
+  return <Outlet />;
+}
+
+export default AuthenticatedRoute;
+```
+
+```tsx
+/* src/router.tsx */
+
+import { Route } from 'react-router-dom';
+import AuthenticatedRoute from './routes/authenticatedRoute';
+
+function Router() {
+  return (
+    <Routes>
+      <Route element={<AuthenticatedRoute />}>
+        <Route path="/" element={<HomePage />} />
+      </Route>
+
+      <Route path="/signin" element={<SignInPage />} />
+
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
+}
+
+export default Router;
+```
+
+</details>
