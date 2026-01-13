@@ -7,11 +7,13 @@ const api = axios.create({
   },
 });
 
+/* Request Interceptor */
 api.interceptors.request.use(
   (config) => config,
   (error) => Promise.reject(error),
 );
 
+/* Response Interceptor */
 api.interceptors.response.use(
   (response) => response,
   (error) => Promise.reject(error),

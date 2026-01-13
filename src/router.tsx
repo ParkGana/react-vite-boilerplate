@@ -12,6 +12,7 @@ function Router() {
 
       <Route path="/signin" element={<SignInPage />} />
 
+      {/* 등록되지 않은 경로로 접속을 시도할 경우, / 경로로 redirect */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

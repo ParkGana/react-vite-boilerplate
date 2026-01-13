@@ -13,6 +13,7 @@
   box-sizing: border-box;
 }
 
+/* 스크롤 UI 제거 */
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
