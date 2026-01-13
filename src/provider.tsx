@@ -1,5 +1,7 @@
+import QueryProvider from './providers/queryProvider';
+
 function Provider({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return <QueryProvider>{children}</QueryProvider>;
 }
 
 export default Provider;

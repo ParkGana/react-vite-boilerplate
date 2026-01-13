@@ -409,3 +409,43 @@ export default api;
 ```
 
 </details>
+
+<br />
+
+<!-- TanStack Query 설정 -->
+<details>
+
+<summary><strong>TanStack Query 설정</strong></summary>
+<br />
+
+```bash
+yarn add @tanstack/react-query
+```
+
+```tsx
+/* src/providers/queryProvider.tsx */
+
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const QueryProvider = ({ children }: { children: React.ReactNode }) => {
+  const queryClient = new QueryClient();
+
+  return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
+};
+
+export default QueryProvider;
+```
+
+```tsx
+/* src/provider.tsx */
+
+import QueryProvider from './providers/queryProvider';
+
+function Provider({ children }: { children: React.ReactNode }) {
+  return <QueryProvider>{children}</QueryProvider>;
+}
+
+export default Provider;
+```
+
+</details>
