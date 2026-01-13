@@ -167,3 +167,39 @@ createRoot(document.getElementById('root')!).render(
 ```
 
 </details>
+
+<br />
+
+<!-- import 순서 자동 정렬되도록 설정 (Prettier 설정 필요) -->
+<details>
+
+<summary><strong>import 순서 자동 정렬되도록 설정 (Prettier 설정 필요)</strong></summary>
+<br />
+
+```bash
+yarn add -D @trivago/prettier-plugin-sort-imports
+```
+
+```json
+/* .prettierrc */
+
+{	
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+
+  "importOrder": ["^react$", "^react", "<THIRD_PARTY_MODULES>", "^@/", "^[./]"],
+  "importOrderSeparation": false,
+  "importOrderSortSpecifiers": true
+}
+```
+
+```json
+/* .vscode/settings.json */
+
+{
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "never"
+  }
+}
+```
+
+</details>
