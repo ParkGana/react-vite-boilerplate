@@ -135,3 +135,35 @@ export default defineConfig({
 ```
 
 </details>
+
+<br />
+
+<!-- Provider 설정 -->
+<details>
+
+<summary><strong>Provider 설정</strong></summary>
+<br />
+
+```tsx
+/* src/provider.tsx */
+
+function Provider({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
+}
+
+export default Provider;
+```
+
+```tsx
+/* src/main.tsx */
+
+import Provider from './provider.tsx';
+
+createRoot(document.getElementById('root')!).render(
+  <Provider>
+    <App />
+  </Provider>,
+);
+```
+
+</details>
