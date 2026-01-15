@@ -3,7 +3,7 @@ import HomePage from './pages/Home';
 import SignInPage from './pages/SignIn';
 import AuthenticatedRoute from './routes/authenticatedRoute';
 
-function Router() {
+const Router = () => {
   return (
     <Routes>
       <Route element={<AuthenticatedRoute />}>
@@ -16,6 +16,6 @@ function Router() {
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
-}
+};
 
 export default Router;

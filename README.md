@@ -147,7 +147,7 @@ export default defineConfig({
 ```tsx
 /* src/provider.tsx */
 
-function Provider({ children }: { children: React.ReactNode }) {
+const Provider = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 }
 
@@ -290,7 +290,7 @@ export default HomePage;
 import { Navigate, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/Home';
 
-function Router() {
+const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
@@ -309,7 +309,7 @@ export default Router;
 import { BrowserRouter } from 'react-router-dom';
 import Router from './router';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Router />
@@ -352,7 +352,7 @@ export default AuthenticatedRoute;
 import { Route } from 'react-router-dom';
 import AuthenticatedRoute from './routes/authenticatedRoute';
 
-function Router() {
+const Router = () => {
   return (
     <Routes>
       <Route element={<AuthenticatedRoute />}>
@@ -441,7 +441,7 @@ export default QueryProvider;
 
 import QueryProvider from './providers/queryProvider';
 
-function Provider({ children }: { children: React.ReactNode }) {
+const Provider = ({ children }: { children: React.ReactNode }) => {
   return <QueryProvider>{children}</QueryProvider>;
 }
 

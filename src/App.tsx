@@ -2,7 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 import PageLayout from './components/layout/PageLayout';
 import Router from './router';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <PageLayout>
@@ -10,6 +10,6 @@ function App() {
       </PageLayout>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
