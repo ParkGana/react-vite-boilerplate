@@ -13,13 +13,17 @@
   box-sizing: border-box;
 }
 
-/* 스크롤 UI 제거 */
 body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: auto;
+  scrollbar-width: auto;
 }
 
 ::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+  width: 6px;
+  height: 6px;
+  background: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
 }
